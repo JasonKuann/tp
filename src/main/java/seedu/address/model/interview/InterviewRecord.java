@@ -2,12 +2,22 @@ package seedu.address.model.interview;
 
 import java.util.Objects;
 
+/**
+ * Represents an interview record with an id, date, and notes.
+ */
 public class InterviewRecord {
 
     private final String id;
     private final String date;
     private final String notes;
 
+    /**
+     * Constructs an {@code InterviewRecord}.
+     *
+     * @param id The unique id of the interview record.
+     * @param date The date of the interview.
+     * @param notes The notes for the interview.
+     */
     public InterviewRecord(String id, String date, String notes) {
         this.id = Objects.requireNonNull(id);
         this.date = Objects.requireNonNull(date);
@@ -52,5 +62,5 @@ public class InterviewRecord {
     public String toString() {
         return id + " | " + date + " | " + notes;
     }
-
 }
+
