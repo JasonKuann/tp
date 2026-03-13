@@ -2,7 +2,12 @@ package seedu.address.model.person;
 
 import static seedu.address.commons.util.CollectionUtil.requireAllNonNull;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Objects;
+import java.util.Set;
 
 import seedu.address.commons.util.ToStringBuilder;
 import seedu.address.model.interview.InterviewRecord;
@@ -34,7 +39,8 @@ public class Person {
     /**
      * Every field must be present and not null. New constructor that adds the interviewRecords field.
      */
-    public Person(Name name, Phone phone, Email email, Address address, Set<Tag> tags, List<InterviewRecord> interviewRecords){
+    public Person(Name name, Phone phone, Email email, Address address,
+                  Set<Tag> tags, List<InterviewRecord> interviewRecords){
         requireAllNonNull(name, phone, email, address, tags, interviewRecords);
 
         this.name = name;
@@ -81,7 +87,7 @@ public class Person {
     /**
      * Returns a new Person with the given interview record added.
      */
-    public Person addInterviewRecord(InterviewRecord interviewRecord){
+    public Person addInterviewRecord(InterviewRecord interviewRecord) {
         requireAllNonNull(interviewRecord);
         List<InterviewRecord> updatedInterviewRecords = new ArrayList<>(interviewRecords);
         updatedInterviewRecords.add(interviewRecord);
