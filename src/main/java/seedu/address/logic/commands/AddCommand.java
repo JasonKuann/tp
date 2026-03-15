@@ -28,7 +28,7 @@ public class AddCommand extends Command {
             + "Example: " + COMMAND_WORD + " "
             + PREFIX_NAME + "John Doe "
             + PREFIX_STUDENT_ID + "A1234567B "
-            + PREFIX_PHONE + "98765432 "
+            + PREFIX_PHONE + "98765432 ";
 
     public static final String MESSAGE_SUCCESS = "New applicant added: %1$s";
     public static final String MESSAGE_DUPLICATE_PERSON = "This person already exists in HRdex";
